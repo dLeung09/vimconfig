@@ -4,7 +4,7 @@ set wrap
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable filetype plugins
+" Set auto-indent on
 filetype plugin on
 filetype indent on
 
@@ -87,3 +87,13 @@ autocmd BufReadPost *
 
 " Remove the Windows ^M - when the encodings get messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+set ai " Auto indent
+set si " Smart indent
+set wrap " Wrap lines
+
+" Fix 'path option
+set path=.,,**
