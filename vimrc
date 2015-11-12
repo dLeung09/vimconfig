@@ -18,8 +18,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Lets ';' be used insteas of ':'
-
+" Map semicolon to colon
+nnoremap ; :
 
 """"""""""""""""""""""""""""""""""""""""
 " Useful Settings
@@ -89,9 +89,6 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 """"""""""""""""""""""""""""""""""""""""
 " Leader Shortcuts
 """"""""""""""""""""""""""""""""""""""""
-
-" Map semicolon to colon
-nnoremap ; :
 
 " Fast saving
 nnoremap <leader>w :w!<return>
