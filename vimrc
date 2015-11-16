@@ -64,6 +64,7 @@ filetype indent on
 
 " Turn on the WiLd menu
 set wildmenu
+set wildchar=<Tab> wildmenu wildmode=full
 
 " Don't redraw while executing macros (performance?)
 set lazyredraw
@@ -83,8 +84,9 @@ autocmd BufReadPost *
 """"""""""""""""""""""""""""""""""""""""
 
 " Visual mode pressing * or # searches for current selection
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+"   -> Need to add 'VisualSelection'?
+" vnoremap <silent> * :call VisualSelection('f')<CR>
+" vnoremap <silent> # :call VisualSelection('b')<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 " Leader Shortcuts
@@ -100,11 +102,12 @@ nnoremap <leader>n :set nu!<return>
 nnoremap <leader>i :set ic!<return>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>tf :tabfind 
+"   -> Removed for conflict with buffer behaviour
+"map <leader>tn :tabnew<cr>
+"map <leader>to :tabonly<cr>
+"map <leader>tc :tabclose<cr>
+"map <leader>tm :tabmove
+"map <leader>tf :tabfind
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -118,3 +121,28 @@ nnoremap <leader>s :set spell!
 
 " Remove the Windows ^M - when the encodings get messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+""""""""""""""""""""""""""""""""""""""""
+" Buffer behaviour settings
+""""""""""""""""""""""""""""""""""""""""
+
+" This allows buffers to be hidden if I've modified a buffer.
+set hidden
+
+" To open a new empty buffer
+nmap <leader>tn :enew<cr>
+
+" Open file based on current directory
+nmap <leader>f :e <c-r>=expand("%:p:h")<cr>/
+
+" Move to the next buffer
+nmap <leader>l :bnext<cr>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<rc>
+
+" Close the current buffer and move to the previous one
+nmap <leader>q :bp <BAR> bd #<cr>
+
+" Show all open buffers and their status
+nmap <leader>ls :ls<cr>
