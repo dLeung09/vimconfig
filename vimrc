@@ -13,7 +13,7 @@ map j gj
 map k gk
 
 " Smart way to move between windows
-map <C-f> <C-W>j
+map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
@@ -64,7 +64,7 @@ filetype indent on
 
 " Turn on the WiLd menu
 set wildmenu
-set wildchar=<Tab> wildmenu wildmode=full
+set wildchar=<Tab> wildmode=full
 
 " Don't redraw while executing macros (performance?)
 set lazyredraw
@@ -139,10 +139,16 @@ nmap <leader>f :e <c-r>=expand("%:p:h")<cr>/
 nmap <leader>l :bnext<cr>
 
 " Move to the previous buffer
-nmap <leader>h :bprevious<rc>
+nmap <leader>h :bprevious<cr>
 
 " Close the current buffer and move to the previous one
 nmap <leader>q :bp <BAR> bd #<cr>
 
 " Show all open buffers and their status
 nmap <leader>ls :ls<cr>
+
+" Split window verticaly
+nmap <leader>v <C-W><C-v>
+
+" Split window horizontally
+nmap <leader>b :split<cr>
