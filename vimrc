@@ -21,6 +21,9 @@ map <C-l> <C-W>l
 " Map semicolon to colon
 nnoremap ; :
 
+" Map <tab> to %
+nnoremap <TAB> %
+
 """"""""""""""""""""""""""""""""""""""""
 " Useful Settings
 """"""""""""""""""""""""""""""""""""""""
@@ -107,7 +110,7 @@ nnoremap <leader>i :set ic!<return>
 "map <leader>to :tabonly<cr>
 "map <leader>tc :tabclose<cr>
 "map <leader>tm :tabmove
-"map <leader>tf :tabfind
+map <leader>p :tabfind<space>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -145,7 +148,10 @@ nmap <leader>h :bprevious<cr>
 nmap <leader>q :bp <BAR> bd #<cr>
 
 " Show all open buffers and their status
-nmap <leader>ls :ls<cr>
+nmap <leader>ss :ls<cr>
+
+" Switch to specific buffer (see which buffers are open using above)
+nmap <leader>sb :b
 
 " Split window verticaly
 nmap <leader>v <C-W><C-v>
