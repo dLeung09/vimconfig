@@ -1,1 +1,9 @@
 This is my Vim config
+
+When loading to new machine, do the following:
+    - Make sure this directory ('vimconfig/') is in ('~/.vim/')
+    - Save the local '.vimrc' (or '_vimrc') file to a backup file (such as 'vimrc_backup'
+    - Remove the contents of '.vimrc', and replace with the following line:
+        source ~/.vim/vimconfig/vimrc
+    - Close vim and reopen to check changes.
+
