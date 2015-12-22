@@ -149,6 +149,12 @@ map <leader>p :tabfind<space>
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
+" Moves forward one page
+nnoremap <leader>j <C-f>
+
+" Moves backward one page
+nnoremap <leader>k <C-b>
+
 " Fix spelling
 nnoremap <leader>f 1z=
 
