@@ -57,6 +57,9 @@ nnoremap ; :
 " Map <tab> to %
 nnoremap <TAB> %
 
+" Delete current file and close buffer
+"nnoremap <leader>rm delete(expand('%')) | bdelete!<CR>
+
 """"""""""""""""""""""""""""""""""""""""
 " Useful Settings
 """"""""""""""""""""""""""""""""""""""""
