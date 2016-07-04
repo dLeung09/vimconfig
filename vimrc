@@ -68,11 +68,14 @@ nnoremap <TAB> %
 syntax on
 set encoding=utf-8
 
+" Useful for finding whitespace issues
+" 	Enable using ' :set list '
+:set listchars=eol:$,tab:>>,trail:~,extends:>,precedes:<
+
 " Fix 'path' option - useful for 'tabfind'
 set path=.,,**
 
 set ai " Auto indent
-set si " Smart indent
 set wrap " Wrap lines
 
 " Highlight search results
@@ -85,8 +88,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -109,8 +112,12 @@ set wildchar=<Tab> wildmode=full
 set lazyredraw
 
 " Linebreak on 500 characters
-set lbr
-set tw=500
+"set lbr
+"set tw=500
+
+" Linebreak and wrap
+set linebreak
+set nolist
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
