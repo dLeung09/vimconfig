@@ -1,8 +1,9 @@
 if has('win32')
 	set nocompatible
 	source $VIMRUNTIME/vimrc_example.vim
-	source $VIMRUNTIME/mswin.vim
+	"source $VIMRUNTIME/mswin.vim
 	behave mswin
+    colorscheme desert
 
 	set diffexpr=MyDiff()
 	function MyDiff()
@@ -114,6 +115,7 @@ set lazyredraw
 " Linebreak on 500 characters
 "set lbr
 "set tw=500
+set tw=0
 
 " Linebreak and wrap
 set linebreak
