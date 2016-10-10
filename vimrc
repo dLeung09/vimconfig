@@ -1,9 +1,10 @@
+colorscheme desert
+
 if has('win32')
 	set nocompatible
 	source $VIMRUNTIME/vimrc_example.vim
 	"source $VIMRUNTIME/mswin.vim
 	behave mswin
-    colorscheme desert
 
 	set diffexpr=MyDiff()
 	function MyDiff()
