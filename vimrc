@@ -77,11 +77,15 @@ set encoding=utf-8
 " Fix 'path' option - useful for 'tabfind'
 set path=.,,**
 
-set ai " Auto indent
-set wrap " Wrap lines
-
 " Highlight search results
 set hlsearch
+
+""""""""""""""""""""""""""""""""""""""""
+" Tabs
+""""""""""""""""""""""""""""""""""""""""
+
+set ai " Auto indent
+set wrap " Wrap lines
 
 " Use spaces instead of tabs
 set expandtab
@@ -93,6 +97,8 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 
+set softtabstop=4
+
 " Show matching brackets when text indicator is over them
 set showmatch
 
@@ -103,8 +109,9 @@ set so=7
 set history=700
 
 " Set auto-indent on
-filetype plugin on
-filetype indent on
+" filetype plugin on
+" filetype indent on
+filetype plugin indent on
 
 " Turn on the WiLd menu
 set wildmenu
@@ -210,3 +217,15 @@ nmap <leader>v <C-W><C-v>
 
 " Split window horizontally
 nmap <leader>b :split<cr>
+
+" Turn off auto adding comments on next line
+set fo=tcq
+
+set t_Co=256
+
+set ruler
+
+highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
+match LiteralTabs /\s\  /
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
