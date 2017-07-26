@@ -1,0 +1,11 @@
+echo "Backing up old .vimrc file to ~/.vimrc_backup"
+cp ~/.vimrc ~/.vimrc_backup && echo "...Success"
+
+echo "Sourcing version controlled vimrc file"
+echo "source ~/.vim/vimconfig/vimrc" > ~/.vimrc && echo "...Success"
+
+echo "Installing pathogen"
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && echo "...Success"
+
+echo "Installing Syntax files"
+git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim && echo "... Typescript"

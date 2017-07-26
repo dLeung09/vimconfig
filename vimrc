@@ -218,6 +218,8 @@ nmap <leader>v <C-W><C-v>
 " Split window horizontally
 nmap <leader>b :split<cr>
 
+nmap <leader><TAB> <C-6>
+
 " Turn off auto adding comments on next line
 set fo=tcq
 
@@ -229,3 +231,6 @@ highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
 match LiteralTabs /\s\  /
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
+
+" Pathogen
+execute pathogen#infect()
