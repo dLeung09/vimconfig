@@ -9,3 +9,4 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 
 echo "Installing Syntax files"
 git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim && echo "... Typescript"
+git clone https://github.com/gatih/vim-go.git ~/.vim/bundle/vim-go && echo "... Go"
