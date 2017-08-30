@@ -181,6 +181,12 @@ nnoremap <leader>f 1z=
 " Toggle spelling visuals
 nnoremap <leader>s :set spell!
 
+" Perform a grep
+nnoremap <leader>g :! grep -rs --color=always 
+
+" Source vimrc file
+nnoremap <leader>sv :source ~/.vimrc<cr>
+
 " Remove the Windows ^M - when the encodings get messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
