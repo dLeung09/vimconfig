@@ -204,7 +204,7 @@ nmap <leader>tn :enew<cr>
 "nmap <leader>f :e <c-r>=expand("%:p:h")<cr>/
 
 " NERD Tree plugin
-nmap <leader>f :NERDTree
+nmap <leader>f :NERDTree<cr>
 
 " Move to the next buffer
 nmap <leader>l :bnext<cr>
