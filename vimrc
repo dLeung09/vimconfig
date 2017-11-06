@@ -176,7 +176,7 @@ nnoremap <leader>j <C-f>
 nnoremap <leader>k <C-b>
 
 " Fix spelling
-nnoremap <leader>f 1z=
+"nnoremap <leader>f 1z=
 
 " Toggle spelling visuals
 nnoremap <leader>s :set spell!
@@ -201,7 +201,10 @@ set hidden
 nmap <leader>tn :enew<cr>
 
 " Open file based on current directory
-nmap <leader>f :e <c-r>=expand("%:p:h")<cr>/
+"nmap <leader>f :e <c-r>=expand("%:p:h")<cr>/
+
+" NERD Tree plugin
+nmap <leader>f :NERDTree
 
 " Move to the next buffer
 nmap <leader>l :bnext<cr>
