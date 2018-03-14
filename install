@@ -6,6 +6,7 @@ echo "source ~/.vim/vimconfig/vimrc" > ~/.vimrc && echo "...Success"
 
 echo "Installing pathogen"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && echo "...Success"
+echo "NOTE: If this is a Windows machine, move '~/.vim/bundle' and '~/.vim/autoload' to '~/vimfiles/'
 
 echo "Installing Syntax files"
 git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim && echo "... Typescript"
