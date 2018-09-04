@@ -249,3 +249,4 @@ execute pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""
 au FileType yaml setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
+au FileType typescript setl sw=2 sts=2 et
