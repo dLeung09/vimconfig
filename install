@@ -14,3 +14,11 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go && echo "... 
 
 echo "Installing Plugins"
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree && echo "... NERDTree"
+
+echo "Configuring tmux"
+mkdir -p ~/.tmux && echo "... tmux directory created"
+cp ~/.vim/vimconfig/tmux/reset ~/.tmux/reset && echo "... reset file set"
+cp ~/.vim/vimconfig/tmux/tmux.conf ~/.tmux.conf && echo "... configuration file set"
+
+echo "Installing tmux theme"
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack && echo "... Success"
