@@ -1,0 +1,79 @@
+
+
+Rename/Move files with different suffix: cp /home/foo/reallylongname.cpp{,-old}
+    $ ls
+        /home/foo/reallylongname.cpp
+    $ cp /home/foo/reallylongname.cpp{,-old}
+    $ ls
+        /home/foo/reallylongname.cpp /home/foo/reallylongname.cpp-old
+
+    $ mv /home/foo/reallylongname.{cpp,cc}
+    $ ls
+        /home/foo/reallylongname.cc
+
+Repeat last commnad: !!
+	$ chmod +x test.sh
+	$ sudo !!
+		sudo chmod +x test.sh
+
+Use last word of previous command: !$
+    $ docker tag dacdbbe44ac0 registry.local613.com:5000/workflow-controller
+    $ docker push !$
+    docker push registry.local613.com:5000/workflow-controller
+
+    $ mkdir ~/go/src/workflow
+    $ echo !$:t
+    echo workflow
+
+    $ mkdir ~/go/src/job
+    $ echo !$:h
+    echo ~/go/src/
+	
+	ALT + . achieves the same thing, but will let you cycle through history
+	$ mkdir ~/go/src/workflow
+	$ mkdir ~/go/src/job
+		ALT + . == ~/go/src/job
+		ALT + .. == ~/go/src/workflow
+
+Use first non-command word of previous command: !^
+    $ echo Hello World
+    $ echo !^
+    echo Hello
+
+    $ mkdir ~/go/src/workflow
+    $ echo !^:t
+    echo workflow
+
+    $ mkdir ~/go/src/job
+    $ echo !^:h
+    echo ~/go/src/
+
+Use all non-command words of previous command: !*
+    $ docker tag dacdbbe44ac0 registry.local613.com:5000/workflow-controller
+    $ echo !*
+    echo tag dacdbbe44ac0 registry.local613.com:5000/workflow-controller
+
+    $ echo !*:2
+    echo dacdbbe44ac0
+
+Replace <string_one> with <string_two> of last command: ^<string_one>^<string_two>
+    $ ehco foo bar baz
+    bash: ehco: command not found
+    $ ^ehco^echo
+    foo bar baz
+
+Search history for the most recent command with a string and print it: !?foo?:p
+    $ cd ~/go/src
+    $ ls
+    $ !?src?:p
+    cd ~/go/src
+
+Use yes command for commands/scripts that need interactive response
+	$ yes | cmd_or_script
+	
+Empty a file
+	$ > filename
+	
+alias hg='history | grep -i $i'
+
+curl -X POST -H 'Header: header-content' <endpoint_url> -k
