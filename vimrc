@@ -273,6 +273,7 @@ let @y=''
 let @z=''
 
 " Pathogen
+set nocp
 execute pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""
