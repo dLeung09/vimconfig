@@ -241,6 +241,37 @@ match LiteralTabs /\s\  /
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
+""""""""""""""""""""""""""""""""""""""""
+" Reset macro buffers
+""""""""""""""""""""""""""""""""""""""""
+
+let @a=''
+let @b=''
+let @c=''
+let @d=''
+let @e=''
+let @f=''
+let @g=''
+let @h=''
+let @i=''
+let @j=''
+let @k=''
+let @l=''
+let @m=''
+let @n=''
+let @o=''
+let @p=''
+let @q=''
+let @r=''
+let @s=''
+let @t=''
+let @u=''
+let @v=''
+let @w=''
+let @x=''
+let @y=''
+let @z=''
+
 " Pathogen
 execute pathogen#infect()
 
@@ -249,4 +280,6 @@ execute pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""
 au FileType yaml setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
+au FileType java setl sw=2 sts=2 et
 au FileType typescript setl sw=2 sts=2 et
+au FileType scss setl sw=2 sts=2 et
