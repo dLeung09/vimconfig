@@ -104,3 +104,12 @@ cp "$SCRIPT_DIR"/tmux/tmux.conf ~/.tmux.conf && echo "... configuration file set
 # Install the tmux themepack; theme is specified in the config
 echo "Installing tmux theme"
 git clone https://github.com/jimeh/tmux-themepack.git "$INSTALL_DIR"/.tmux-themepack && echo "... Success"
+
+### GIT ALIASES
+
+echo "Setting git aliases"
+
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
