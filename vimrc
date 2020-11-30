@@ -129,6 +129,9 @@ set tw=0
 set linebreak
 set nolist
 
+" Hybrid line numbers
+set number relativenumber
+
 " Return to last edit position when opening files
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -152,7 +155,12 @@ autocmd BufReadPost *
 nnoremap <leader>w :w!<return>
 
 " Toggle line-numbers
-nnoremap <leader>n :set nu!<return>
+nnoremap <leader>n :set nu! rnu!<return>
+augroup numbertoggle
+   autocmd!
+   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber number
+   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber nonumber
+augroup END
 
 " Toggle case (in-)sensitive search
 nnoremap <leader>i :set ic!<return>
@@ -235,6 +243,9 @@ set fo=tcq
 set t_Co=256
 
 set ruler
+
+" Fix backspace behavior
+:set backspace=indent,eol,start
 
 highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
 match LiteralTabs /\s\  /
