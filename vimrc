@@ -125,6 +125,13 @@ augroup END
 "####################################################################################################
 
 set ruler
+set laststatus=2
+set statusline=
+set statusline+=%#StatusLine#
+set statusline+=\[%{getcwd()}\]
+set statusline+=%#ErrorMsg#
+set statusline+=\ %f
+set statusline+=\ %#StatusLine#
 
 "####################################################################################################
 "########   1.6 Environment - Navigation      <env_nav>    ##########################################
